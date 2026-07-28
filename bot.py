@@ -5,6 +5,9 @@ A Telegram bot that finds where movies are streaming, renting, or buying.
 import os
 import logging
 from dotenv import load_dotenv
+
+load_dotenv()
+
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application,
@@ -32,7 +35,6 @@ from utils.formatters import (
     format_now_playing
 )
 
-load_dotenv()
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -454,3 +456,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
